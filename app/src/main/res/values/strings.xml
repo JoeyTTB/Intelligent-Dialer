@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">智能拨号器</string>
+    
+    <!-- 主界面底部导航 -->
+    <string name="tab_dialer">拨号</string>
+    <string name="tab_contacts">联系人</string>
+    <string name="tab_favorites">收藏</string>
+    <string name="tab_recents">最近</string>
+    <string name="tab_settings">设置</string>
+    
+    <!-- 拨号页面 -->
+    <string name="call_button">拨打</string>
+    <string name="delete_button">删除</string>
+    <string name="voice_dial">语音拨号</string>
+    <string name="scan_dial">扫码拨号</string>
+    
+    <!-- 语音拨号页面 -->
+    <string name="voice_instruction">请说出您要拨打的联系人姓名或电话号码</string>
+    <string name="voice_listening">正在聆听...</string>
+    <string name="voice_processing">正在处理...</string>
+    <string name="voice_error">无法识别，请重试</string>
+    <string name="voice_retry">重试</string>
+    
+    <!-- 扫码拨号页面 -->
+    <string name="scan_instruction">将二维码/条形码放入框内，即可自动扫描</string>
+    <string name="scan_no_camera">未检测到相机</string>
+    <string name="scan_permission_required">需要相机权限</string>
+    
+    <!-- 设置页面 -->
+    <string name="settings_title">设置</string>
+    <string name="settings_theme">主题设置</string>
+    <string name="settings_dark_theme">深色主题</string>
+    <string name="settings_follow_system">跟随系统主题</string>
+    <string name="settings_font_size">字体大小</string>
+    <string name="settings_font_small">小</string>
+    <string name="settings_font_medium">中</string>
+    <string name="settings_font_large">大</string>
+    <string name="settings_button_size">按钮大小</string>
+    <string name="settings_apply">应用设置</string>
+    <string name="settings_ringtone">铃声设置</string>
+    <string name="settings_vibration">振动设置</string>
+    <string name="settings_language">语言设置</string>
+    <string name="settings_about">关于</string>
+    
+    <!-- 提示信息 -->
+    <string name="permission_required">需要权限</string>
+    <string name="permission_explanation">该应用需要以下权限才能正常工作：电话、联系人、通话记录等</string>
+    <string name="search_contacts">搜索联系人</string>
+    <string name="no_contacts">没有联系人</string>
+    <string name="no_recent_calls">没有通话记录</string>
+    <string name="no_favorites">没有收藏联系人</string>
+    <string name="add_to_favorites">添加至收藏</string>
+    <string name="removed_from_favorites">已从收藏中移除</string>
+</resources>

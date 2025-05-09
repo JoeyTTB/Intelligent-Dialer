@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 用于保存原始字体大小的标签ID -->
+    <item name="tag_original_text_size" type="id" />
+    
+    <!-- 用于保存原始布局参数的标签ID -->
+    <item name="tag_original_layout_params" type="id" />
+    
+    <!-- 用于保存原始内边距的标签ID -->
+    <item name="tag_original_padding" type="id" />
+</resources> 

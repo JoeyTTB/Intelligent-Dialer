@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- 应用主题颜色 -->
+    <color name="primary">#FF2196F3</color>
+    <color name="primary_dark">#FF1976D2</color>
+    <color name="primary_light">#FFBBDEFB</color>
+    <color name="accent">#FF03A9F4</color>
+    
+    <!-- 功能特定颜色 -->
+    <color name="call_button">#FF4CAF50</color>
+    <color name="delete_button">#FFF44336</color>
+    <color name="contact_card">#FFFAFAFA</color>
+    <color name="keypad_background">#FFF5F5F5</color>
+    <color name="keypad_number">#FF212121</color>
+    <color name="keypad_letter">#FF757575</color>
+    <color name="divider">#FFBDBDBD</color>
+    
+    <!-- 状态颜色 -->
+    <color name="missed_call">#FFF44336</color>
+    <color name="incoming_call">#FF4CAF50</color>
+    <color name="outgoing_call">#FF2196F3</color>
+    <color name="favorite_contact">#FFFFEB3B</color>
+    
+    <!-- ZXing 扫描器颜色 -->
+    <color name="zxing_viewfinder_mask">#60000000</color>
+    
+    <!-- 深色模式颜色 -->
+    <color name="dark_background">#FF121212</color>
+    <color name="dark_surface">#FF1E1E1E</color>
+    <color name="dark_primary">#FF90CAF9</color>
+    <color name="dark_primary_dark">#FF5D99C6</color>
+    <color name="dark_primary_light">#FFE3F2FD</color>
+    <color name="dark_text_primary">#FFEEEEEE</color>
+    <color name="dark_text_secondary">#FFB0B0B0</color>
+    <color name="dark_divider">#FF2D2D2D</color>
+    <color name="dark_contact_card">#FF2D2D2D</color>
+    <color name="dark_keypad_background">#FF1E1E1E</color>
+    <color name="dark_keypad_number">#FFEEEEEE</color>
+    <color name="dark_keypad_letter">#FFB0B0B0</color>
+</resources>
