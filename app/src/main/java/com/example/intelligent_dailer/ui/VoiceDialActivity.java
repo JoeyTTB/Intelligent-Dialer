@@ -228,7 +228,7 @@ public class VoiceDialActivity extends AppCompatActivity {
         }
         
         // 如果提取到号码，显示拨号和重试按钮
-        if (builder.length() >= 7) {
+        if (builder.length() >= 3) {
             phoneNumber = builder.toString();
             dialButton.setVisibility(View.VISIBLE);
             retryButton.setVisibility(View.VISIBLE);

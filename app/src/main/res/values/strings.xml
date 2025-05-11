@@ -15,7 +15,7 @@
     <string name="scan_dial">扫码拨号</string>
     
     <!-- 语音拨号页面 -->
-    <string name="voice_instruction">请说出您要拨打的联系人姓名或电话号码</string>
+    <string name="voice_instruction">请说出您要拨打的电话号码</string>
     <string name="voice_listening">正在聆听...</string>
     <string name="voice_processing">正在处理...</string>
     <string name="voice_error">无法识别，请重试</string>

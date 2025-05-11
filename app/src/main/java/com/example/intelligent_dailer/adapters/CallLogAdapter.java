@@ -54,6 +54,7 @@ public class CallLogAdapter extends RecyclerView.Adapter<CallLogAdapter.CallLogV
         private final TextView dateTextView;
         private final ImageView callTypeIcon;
         private final ImageButton callButton;
+        private final TextView callStatusTextView;
 
         public CallLogViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -64,6 +65,7 @@ public class CallLogAdapter extends RecyclerView.Adapter<CallLogAdapter.CallLogV
             dateTextView = itemView.findViewById(R.id.dateTextView);
             callTypeIcon = itemView.findViewById(R.id.callTypeIcon);
             callButton = itemView.findViewById(R.id.callButton);
+            callStatusTextView = itemView.findViewById(R.id.callStatusTextView);
 
             itemView.setOnClickListener(v -> {
                 int position = getAdapterPosition();
@@ -83,12 +85,16 @@ public class CallLogAdapter extends RecyclerView.Adapter<CallLogAdapter.CallLogV
         public void bind(CallLog callLog) {
             // 设置名称，没有名称则显示电话号码
             String displayName = callLog.getName();
-            if (displayName == null || displayName.isEmpty()) {
-                displayName = callLog.getPhoneNumber();
-                nameTextView.setVisibility(View.GONE);
-            } else {
+            boolean isContact = displayName != null && !displayName.isEmpty();
+            
+            if (!isContact) {
+                // 非联系人显示"未知"
+                nameTextView.setText("未知");
                 nameTextView.setVisibility(View.VISIBLE);
+            } else {
+                // 联系人显示名称
                 nameTextView.setText(displayName);
+                nameTextView.setVisibility(View.VISIBLE);
             }
             
             // 设置电话号码
@@ -108,14 +114,27 @@ public class CallLogAdapter extends RecyclerView.Adapter<CallLogAdapter.CallLogV
             switch (callLog.getType()) {
                 case CallLog.CALL_TYPE_INCOMING:
                     callTypeIcon.setImageResource(R.drawable.ic_call_incoming);
+                    callStatusTextView.setText("呼入");
                     break;
                 case CallLog.CALL_TYPE_OUTGOING:
                     callTypeIcon.setImageResource(R.drawable.ic_call_outgoing);
+                    callStatusTextView.setText("呼出");
                     break;
                 case CallLog.CALL_TYPE_MISSED:
+                    callTypeIcon.setImageResource(R.drawable.ic_call_missed);
+                    callStatusTextView.setText("未接");
+                    break;
                 case CallLog.CALL_TYPE_REJECTED:
                     callTypeIcon.setImageResource(R.drawable.ic_call_missed);
+                    callStatusTextView.setText("已拒绝");
                     break;
+            }
+            
+            // 显示接通状态
+            if (callLog.getDuration() > 0) {
+                callStatusTextView.append(" · 已接通");
+            } else if (callLog.getType() != CallLog.CALL_TYPE_MISSED && callLog.getType() != CallLog.CALL_TYPE_REJECTED) {
+                callStatusTextView.append(" · 未接通");
             }
         }
         

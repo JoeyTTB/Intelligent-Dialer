@@ -81,7 +81,7 @@ public class CallLog {
         if (name != null && !name.isEmpty()) {
             return name.substring(0, 1).toUpperCase();
         } else if (phoneNumber != null && !phoneNumber.isEmpty()) {
-            return phoneNumber.substring(0, 1);
+            return "?"; // 未知联系人显示问号
         }
         return "?";
     }
